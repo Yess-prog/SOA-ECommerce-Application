@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+  
+  <!-- User Service Endpoint -->
+  <endpoint
+      name="UserService"
+      implementation="com.ecommerce.soap.UserService"
+      url-pattern="/services/UserService"/>
+  
+  <!-- Product Service Endpoint -->
+  <endpoint
+      name="ProductService"
+      implementation="com.ecommerce.soap.ProductService"
+      url-pattern="/services/ProductService"/>
+  
+  <!-- Category Service Endpoint -->
+  <endpoint
+      name="CategoryService"
+      implementation="com.ecommerce.soap.CategoryService"
+      url-pattern="/services/CategoryService"/>
+  
+  <!-- Order Service Endpoint -->
+  <endpoint
+      name="OrderService"
+      implementation="com.ecommerce.soap.OrderService"
+      url-pattern="/services/OrderService"/>
+  
+  <!-- Cart Service Endpoint -->
+  <endpoint
+      name="CartService"
+      implementation="com.ecommerce.soap.CartService"
+      url-pattern="/services/CartService"/>
+  <!-- OrderItem Service Endpoint -->
+  <endpoint
+      name="OrderItemService"
+      implementation="com.ecommerce.soap.OrderItemService"
+      url-pattern="/services/OrderItemService"/>
+  
+</endpoints>

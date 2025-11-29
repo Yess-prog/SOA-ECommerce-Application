@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+  
+  <display-name>EcommerceSOAP</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- User Service -->
+  <servlet>
+    <servlet-name>UserService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserService</servlet-name>
+    <url-pattern>/services/UserService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Product Service -->
+  <servlet>
+    <servlet-name>ProductService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductService</servlet-name>
+    <url-pattern>/services/ProductService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Category Service -->
+  <servlet>
+    <servlet-name>CategoryService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryService</servlet-name>
+    <url-pattern>/services/CategoryService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Order Service -->
+  <servlet>
+    <servlet-name>OrderService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderService</servlet-name>
+    <url-pattern>/services/OrderService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Cart Service -->
+  <servlet>
+    <servlet-name>CartService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartService</servlet-name>
+    <url-pattern>/services/CartService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- OrderItem Service -->
+  <servlet>
+    <servlet-name>OrderItemService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderItemService</servlet-name>
+    <url-pattern>/services/OrderItemService</url-pattern>
+  </servlet-mapping>
+  
+  <!-- JAX-WS Listener -->
+  <listener>
+    <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+  </listener>
+  
+</web-app>
